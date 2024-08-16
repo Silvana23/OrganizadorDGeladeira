@@ -1,5 +1,5 @@
 # Organizador De Geladeira
- um sistema em C# para gerenciar itens em uma geladeira. Organiza a geladeira em três andares, cada um com dois containers, e exibe a localização dos itens.
+Este projeto implementa um sistema de controle de itens dentro de uma geladeira com três andares. Cada andar possui dois containers com quatro posições cada para organizar itens. O projeto foi desenvolvido em C# com orientação a objetos, incluindo funcionalidades para adicionar e remover itens, além de validações para garantir que as posições e containers estejam corretamente ocupados ou livres.
 
  ## Estrutura da Geladeira
 
@@ -25,3 +25,27 @@ Cada andar possui:
 ## RESULTADO
 
 ![image](https://github.com/user-attachments/assets/295eef78-4ebf-431e-817d-9fad7a72e393)
+
+## NOVAS FUNCIONALIDADES
+
+![image](https://github.com/user-attachments/assets/f5f15b7a-2fec-4607-a489-fde378718c80)
+
+## REQUISITOS
+Esta é a segunda versão do sistema, agora atualizada e aprimorada!
+
+O sistema conta com as seguintes funcionalidades adicionais:
+
+**Remoção de Itens Específicos**
+
+**Adição de Itens em Posições Específicas**
+
+**Remoção de Todos os Itens de um Container**
+
+**Adição de Itens em um Container**
+
+*SEMPRE VALIDAR SE A POSICAO ESTA OCUPADA OU VAZIA E EXIBIR MENSAGEM SE VAZIA OU OCUPADA *
+
+## RESULTADO
+![image](https://github.com/user-attachments/assets/35e99d57-fb40-4f07-bcd3-aa38cb2539ec)
+![image](https://github.com/user-attachments/assets/ace94229-a861-4019-b475-23ded4e21453)
+
