@@ -68,4 +68,13 @@ public class Container<T>
             Console.WriteLine("O container já está vazio.");
         }
     }
+
+    public void ExibirItens()
+    {
+        for (int i = 0; i < Itens.Count; i++)
+        {
+            var item = Itens[i];
+            Console.WriteLine($"    Posição {i + 1}: {(item != null ? item.ToString() : "Vazio")}");
+        }
+    }
 }

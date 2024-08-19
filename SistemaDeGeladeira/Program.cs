@@ -5,7 +5,31 @@ class Program
 {
     static void Main(string[] args)
     {
-        var geladeira = new List<Andar<Produto<string>>>
+        var geladeira = InicializarGeladeira();
+
+        Console.WriteLine("===  Remoção e Adição ===\n");
+
+        geladeira[0].Containers[0].RemoverItem(1);
+        geladeira[0].Containers[0].RemoverItem(1);
+
+        geladeira[0].Containers[0].AdicionarItem(1, new Produto<string>("Maçã Verde"));
+
+        geladeira[1].Containers[1].RemoverTodosItens();
+
+        geladeira[1].Containers[1].AdicionarItens(new Produto<string>("Leite Desnatado"));
+
+        Console.WriteLine("\n=== Estado Atual da Geladeira ===\n");
+
+        for (int andarIndex = 0; andarIndex < geladeira.Count; andarIndex++)
+        {
+            geladeira[andarIndex].ExibirAndar(andarIndex);
+        }
+    }
+
+    // Método para inicializar a geladeira
+    private static List<Andar<Produto<string>>> InicializarGeladeira()
+    {
+        return new List<Andar<Produto<string>>>
         {
             new Andar<Produto<string>>(new List<Container<Produto<string>>>
             {
@@ -37,7 +61,7 @@ class Program
                 {
                     new Produto<string>("Manteiga"),
                     new Produto<string>("Creme de Leite"),
-                    new Produto<string>("Iorgute Natural"),
+                    new Produto<string>("Iogurte Natural"),
                     new Produto<string>("Queijo Minas")
                 } }
             }),
@@ -47,7 +71,7 @@ class Program
                 {
                     new Produto<string>("Presunto Seara"),
                     new Produto<string>("Frango Caipira"),
-                    new Produto<string>("Costela Suina"),
+                    new Produto<string>("Costela Suína"),
                     new Produto<string>("Costela Bovina")
                 } },
                 new Container<Produto<string>>(4) { Itens = new List<Produto<string>>
@@ -59,35 +83,5 @@ class Program
                 } }
             })
         };
-
-        Console.WriteLine("===  Remoção e Adição ===\n");
-
-        geladeira[0].Containers[0].RemoverItem(1);
-        geladeira[0].Containers[0].RemoverItem(1);
-
-        geladeira[0].Containers[0].AdicionarItem(1, new Produto<string>("Maçã Verde"));
-
-        geladeira[1].Containers[1].RemoverTodosItens();
-
-        geladeira[1].Containers[1].AdicionarItens(new Produto<string>("Leite Desnatado"));
-
-        Console.WriteLine("\n=== Estado Atual da Geladeira ===\n");
-
-        for (int andarIndex = 0; andarIndex < geladeira.Count; andarIndex++)
-        {
-            var andar = geladeira[andarIndex];
-            Console.WriteLine($"Andar {andarIndex + 1}:");
-            for (int containerIndex = 0; containerIndex < andar.Containers.Count; containerIndex++)
-            {
-                var container = andar.Containers[containerIndex];
-                Console.WriteLine($"  Container {containerIndex + 1}:");
-                for (int itemIndex = 0; itemIndex < container.Itens.Count; itemIndex++)
-                {
-                    var item = container.Itens[itemIndex];
-                    Console.WriteLine($"    Posição {itemIndex + 1}: {(item != null ? item.Nome : "Vazio")}");
-                }
-            }
-            Console.WriteLine();
-        }
     }
 }
