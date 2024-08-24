@@ -49,3 +49,48 @@ O sistema conta com as seguintes funcionalidades adicionais:
 ![image](https://github.com/user-attachments/assets/35e99d57-fb40-4f07-bcd3-aa38cb2539ec)
 ![image](https://github.com/user-attachments/assets/ace94229-a861-4019-b475-23ded4e21453)
 
+
+## API de Gestão de Geladeira
+
+
+![image](https://github.com/user-attachments/assets/0bf61e62-cde0-4d7f-a523-73e698f68efc)
+
+
+### Endpoints da API
+#### GET /api/geladeira
+**Retorna todos os itens armazenados na geladeira, organizados por andar e container.**
+
+![image](https://github.com/user-attachments/assets/2b7ce258-b196-4246-90fe-6a49b68d3105)
+
+#### GET /api/geladeira/{id}
+**Retorna um item específico da geladeira pelo ID.**
+
+![image](https://github.com/user-attachments/assets/e76105ed-d2c7-48e0-b2ba-4aaa273970f4)
+
+#### POST /api/geladeira/{andar}/{container}
+**Adiciona um novo item à geladeira no andar e container especificados.**
+
+![image](https://github.com/user-attachments/assets/5f9caca1-ea92-469f-8a77-b406de1727c3)
+![image](https://github.com/user-attachments/assets/8fefcaa1-51b5-4f80-af87-81e0ab13bb0a)
+
+
+#### PUT /api/geladeira/{id}
+**Atualiza um item existente na geladeira pelo ID**
+
+![image](https://github.com/user-attachments/assets/15c5a41b-058f-4cde-9a03-10107b99195b)
+![image](https://github.com/user-attachments/assets/c0f040e4-9a79-482c-a3bf-a58caac0987e)
+
+ #### DELETE /api/geladeira/{id}
+**Remove um item da geladeira pelo ID.**
+
+![image](https://github.com/user-attachments/assets/da6c2549-fae3-4eb9-b09c-dfe77a14d063)
+![image](https://github.com/user-attachments/assets/098bea73-56ef-429e-8979-525326a53309)
+
+
+
+Desenvolvido por silvana santos ❤️
+
+
+
+
+
